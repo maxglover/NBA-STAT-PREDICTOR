@@ -37,5 +37,5 @@ def fetch_nba_data(player_id, season, rapidapi_key):
 if __name__ == "__main__":
     player_id = '237'
     season = '2021'
-    rapidapi_key = 'd100523aadmsh0f505327ce67226p1ae882jsnde25f2a4920b'  # Replace with your actual RapidAPI key
+    rapidapi_key = ''  # Replace with your actual RapidAPI key
     fetch_nba_data(player_id, season, rapidapi_key)

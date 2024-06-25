@@ -5,8 +5,12 @@ from src.preprocessing import preprocess_data
 from src.feature_engineering import create_features
 from src.model_training import train_model
 from src.prediction import predict_points
+from dotenv import load_dotenv
 
-rapidapi_key = 'd100523aadmsh0f505327ce67226p1ae882jsnde25f2a4920b'
+
+load_dotenv('key.env')
+rapidapi_key = os.getenv('rapidapi_key')
+
 
 def ensure_directory_exists(directory):
     if not os.path.exists(directory):

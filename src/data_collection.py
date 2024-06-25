@@ -24,7 +24,7 @@ def fetch_nba_data(player_id, season, rapidapi_key):
             return None
         
         game_logs = data['response']
-        columns = game_logs[0].keys()  # Assuming all logs have the same keys
+        columns = game_logs[0].keys()  
         df = pd.DataFrame(game_logs, columns=columns)
         df.to_csv(f'data/raw/player_{player_id}_season_{season}.csv', index=False)
         logging.info(f"Data saved to data/raw/player_{player_id}_season_{season}.csv")
@@ -37,5 +37,5 @@ def fetch_nba_data(player_id, season, rapidapi_key):
 if __name__ == "__main__":
     player_id = '237'
     season = '2021'
-    rapidapi_key = ''  # Replace with your actual RapidAPI key
+    rapidapi_key = ''  
     fetch_nba_data(player_id, season, rapidapi_key)

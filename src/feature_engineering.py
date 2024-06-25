@@ -2,7 +2,7 @@ import pandas as pd
 
 def create_features(file_path):
     df = pd.read_csv(file_path)
-    # Placeholder: Example feature, actual opponent data needed
+    # Placeholder
     df['OPPONENT_AVG_POINTS_ALLOWED'] = df.groupby('MATCHUP')['PTS'].transform('mean')
     df.to_csv(f'data/processed/features_{file_path.split("/")[-1]}', index=False)
     return df

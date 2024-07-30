@@ -38,15 +38,15 @@ def main():
     print("Preprocessing data...")
     preprocess_data(raw_data_file)
     
-    # Step 3: Feature Engineering
-    processed_data_file = f'data/processed/processed_player_{player_id}_season_{season}.csv'
-    print("Creating features...")
-    create_features(processed_data_file)
+    # # Step 3: Feature Engineering
+    # processed_data_file = f'data/processed/processed_player_{player_id}_season_{season}.csv'
+    # print("Creating features...")
+    # create_features(processed_data_file)
     
     # Step 4: Model Training
-    features_data_file = f'data/processed/features_player_{player_id}_season_{season}.csv'
+    processed_data_file = f'data/processed/processed_player_{player_id}_season_{season}.csv'
     print("Training model...")
-    train_model(features_data_file)
+    train_model(processed_data_file)
     
     # Step 5: Prediction
     print("Making prediction...")
